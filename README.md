@@ -62,3 +62,11 @@ This route can be gotten by making a **DELETE** request to the route /api/id . W
 ```
 localhost:5000/api/6502fc5afd029ae6fb5340bc
 ```
+
+## Status codes
+
+201 - when users is created or updated
+
+200 - for deleting or reading the user information
+
+500 - validation or server error
