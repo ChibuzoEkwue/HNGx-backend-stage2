@@ -22,7 +22,7 @@ This is a simple node project, using express for routing and mongoose to connect
 
 ### Home Page
 
-This is the index route you can get it by **GET** request to 
+This is the index route you can get it by **GET** request to
 
 ```
 https://hngx-backend-stage2-k6w2.onrender.com
@@ -39,11 +39,21 @@ This route will ignore any other payload attached to req.body. An example of the
 ```
 https://hngx-backend-stage2-k6w2.onrender.com/api
 ```
+
 An example of an accepted pay load is below
 
 ```json
 {
 	"name": "Chibuzo Ekwue"
+}
+```
+
+An example of the response
+
+```json
+{
+	"name": "Chibuzo Ekwue",
+	"id": "650311cae78100c91777d6d5"
 }
 ```
 
@@ -54,13 +64,13 @@ This route can be gotten by making a **GET** request to the route /api/id This r
 ```
 https://hngx-backend-stage2-k6w2.onrender.com/api/some-user-id
 ```
+
 Example of a response
 
 ```json
 {
-    "_id": "650311cae78100c91777d6d5",
-    "name": "Chibuzo Ekwue",
-    "__v": 0
+	"id": "650311cae78100c91777d6d5",
+	"name": "Chibuzo Ekwue"
 }
 ```
 
@@ -84,9 +94,8 @@ Example of the response is
 
 ```json
 {
-	"_id": "6503116ee78100c91777d6cd",
-	"name": "Dalu Ekwue",
-	"__v": 0
+	"id": "6503116ee78100c91777d6cd",
+	"name": "Dalu Ekwue"
 }
 ```
 
