@@ -26,7 +26,9 @@ route.post("/", async (req, res) => {
 
 		const newUser = await User.create({ name });
 
-		res.status(201).json(newUser);
+		const { _id, name } = newUser;
+
+		res.status(201).json({ id: _id, name });
 	} catch (error) {
 		res.status(500).json({ err: error.message });
 	}
@@ -40,7 +42,9 @@ route.get("/:id", async (req, res) => {
 		if (!userDetails) {
 			throw new Error("it's seems you inputed an invalid id");
 		}
-		res.status(200).json(userDetails);
+		const { _id, name } = userDetails;
+
+		res.status(200).json({ id: _id, name });
 	} catch (error) {
 		res.status(500).json({ err: error.message });
 	}
@@ -72,7 +76,9 @@ route.put("/:id", async (req, res) => {
 			{ name },
 			{ new: true }
 		);
-		res.status(200).json(updatedUser);
+		const { _id, name } = updatedUser;
+
+		res.status(201).json({ id: _id, name });
 	} catch (error) {
 		res.status(500).json({ err: error.message });
 	}

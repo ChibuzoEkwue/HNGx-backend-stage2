@@ -22,15 +22,24 @@ This is a simple node project, using express for routing and mongoose to connect
 
 ### Home Page
 
-This is the index route you can get it by **GET** request to /
+This is the index route you can get it by **GET** request to 
+
+```
+https://hngx-backend-stage2-k6w2.onrender.com
+```
 
 ### CRUD operation
 
 ### Create
 
-This route can be gotten by making a **POST** request to the route /api This route will return a status code of 201 and 500 when we fail validations such not including a name filed to body our if the name field contains anything other a string.
+This route can be gotten by making a **POST** request to the route /api This route will return a status code of 201 and 500 when we fail validations such not including a name field to body our if the name field contains anything other a string.
 
-This route will ignore any other payload attached to req.body.  An example of an accepted pay load is below
+This route will ignore any other payload attached to req.body. An example of the endpoint is
+
+```
+https://hngx-backend-stage2-k6w2.onrender.com/api
+```
+An example of an accepted pay load is below
 
 ```json
 {
@@ -40,27 +49,61 @@ This route will ignore any other payload attached to req.body.  An example of an
 
 ### Read
 
-This route can be gotten by making a **GET** request to the route /api/id This route will return a status code of 200 and 500 when we fail if an invalid or wrong id is used. An example of the endpoint is 
+This route can be gotten by making a **GET** request to the route /api/id This route will return a status code of 200 and 500 when we fail if an invalid or wrong id is used. An example of the endpoint is
 
 ```
-localhost:5000/api/6502fc5afd029ae6fb5340bc
+https://hngx-backend-stage2-k6w2.onrender.com/api/some-user-id
 ```
+Example of a response
 
+```json
+{
+    "_id": "650311cae78100c91777d6d5",
+    "name": "Chibuzo Ekwue",
+    "__v": 0
+}
+```
 
 ### Update
 
-This route can be gotten by making a **PUT** request to the route /api/id This route will return a status code of 201 and 500 if a invalid or wrong id is used. An example of the endpoint is 
+This route can be gotten by making a **PUT** request to the route /api/id This route will return a status code of 201 and 500 if a invalid or wrong id is used. An example of the endpoint is
 
 ```
-localhost:5000/api/6502fc5afd029ae6fb5340bc
+https://hngx-backend-stage2-k6w2.onrender.com/api/some-user-id
+```
+
+Example of the body
+
+```json
+{
+	"name": "Dalu Ekwue"
+}
+```
+
+Example of the response is
+
+```json
+{
+	"_id": "6503116ee78100c91777d6cd",
+	"name": "Dalu Ekwue",
+	"__v": 0
+}
 ```
 
 ### Delete
 
-This route can be gotten by making a **DELETE** request to the route /api/id . Where id is the users id. This route will return a status code of 200. An example of the endpoint is 
+This route can be gotten by making a **DELETE** request to the route /api/id . Where id is the users id. This route will return a status code of 200. An example of the endpoint is
 
 ```
-localhost:5000/api/6502fc5afd029ae6fb5340bc
+https://hngx-backend-stage2-k6w2.onrender.com/api/some-user-id
+```
+
+Example of the response is
+
+```json
+{
+	"msg": "User deleted"
+}
 ```
 
 ## Status codes

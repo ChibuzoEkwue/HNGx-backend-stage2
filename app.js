@@ -1,5 +1,5 @@
 import express from "express";
-import route from "./routes/api.js";
+import route from "./routes/route.js";
 import connectDB from "./utils/db.js";
 const app = express();
 
